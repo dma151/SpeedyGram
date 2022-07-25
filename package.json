@@ -1,0 +1,27 @@
+{
+  "name": "image-editor-api",
+  "version": "1.0.0",
+  "description": "Backend for image-editor/SpeedyGram",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dma151/SpeedyGram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dma151/SpeedyGram/issues"
+  },
+  "homepage": "https://github.com/dma151/SpeedyGram#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.0",
+    "mongoose": "^6.4.7",
+    "nodemon": "^2.0.19"
+  }
+}
