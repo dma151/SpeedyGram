@@ -11,12 +11,12 @@ router.post('/new', async (req, res) => {
     res.status(201).json({newUser: newUser})
 })
 
-router.update('/edit', async (req, res) => {
+router.update('/:id', async (req, res) => {
     const editUser = await User.findByIdAndUpdate(req.params.id, req.body, {new : true})
     res.status(200).json({editedUser : editUser})
 })
 
-router.delete('/delete', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     const deleteUser = await User.findByIdAndDelete(req.params.id)
     res.status(204).json("User deleted")
 })
