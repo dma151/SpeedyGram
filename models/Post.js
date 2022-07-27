@@ -1,9 +1,9 @@
 const mongoose = require("../db/connection");
 
 const postSchema = new mongoose.Schema({
-  creator: { type: mongoose.Schema.ObjectId, ref: "User" },
+  creator: { type: String, required: true },
   image: { data: Buffer, contentType: String },
-  tags: [],
+  caption: {type: String, required: true},
   comments: [{ type: mongoose.Schema.ObjectId, ref: "Comment" }],
 });
 
