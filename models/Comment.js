@@ -1,7 +1,7 @@
 const mongoose = require("../db/connection");
 
 const commentSchema = new mongoose.Schema({
-  owner: { type: String, required: true },
+  creator: { type: String, required: true },
   post: { type: mongoose.Schema.ObjectId, ref: "Post" },
   comment: { type: String, required: true },
 });

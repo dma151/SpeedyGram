@@ -7,6 +7,11 @@ router.get('/', async (req, res) => {
     res.status(200).json({data: comments})
 })
 
+router.get('/:id', async (req, res) => {
+    const comment = await Comment.find({_id:req.params.id})
+    res.status(200).json({data: comment})
+})
+
 router.post('/new', async (req, res) => {
     const newComment = await Comment.create(req.body)
     res.status(201).json({newComment: newComment})

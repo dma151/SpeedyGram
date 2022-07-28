@@ -13,13 +13,13 @@ app.use(express.json());
 
 
 const userController = require('./controllers/userController')
-app.use('/user', userController)
+app.use('/users', userController)
 
 const postController = require('./controllers/postController')
-app.use('/post', postController)
+app.use('/posts', postController)
 
 const commentController = require('./controllers/commentController')
-app.use('/comment', commentController)
+app.use('/comments', commentController)
 
 app.set('port', process.env.PORT || 4000)
 

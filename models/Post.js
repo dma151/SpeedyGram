@@ -2,7 +2,8 @@ const mongoose = require("../db/connection");
 
 const postSchema = new mongoose.Schema({
   creator: { type: String, required: true },
-  image: { data: Buffer, contentType: String },
+  imageUrl: { type: String, required: true},
+  imageEdits: { type: Map, of: Number },
   caption: {type: String, required: true},
   comments: [{ type: mongoose.Schema.ObjectId, ref: "Comment" }],
 });
