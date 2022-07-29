@@ -17,7 +17,7 @@ router.post('/new', async (req, res) => {
     res.status(201).json({newComment: newComment})
 })
 
-router.update('/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     const editComment = await Comment.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.status(200).json({editedComment: editComment})
 })

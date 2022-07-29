@@ -8,13 +8,13 @@ const User = require("../models/User");
 
 router.post("/new", async (req, res) => {
   const userCheck = await User.find({ email: req.body.email });
-  if (userCheck.length == 0) {
+  if (userCheck.length === 0) {
     const newUser = await User.create(req.body);
     res.status(201).json({ newUser: newUser });
   }
 });
 
-router.update("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const editUser = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
