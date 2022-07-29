@@ -41,7 +41,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 // Add new comment to current post
-router.put(":id/addComment", async (req, res) => {
+router.put("/:id/addComment", async (req, res) => {
   const comment = await Comment.find({ _id: req.body.commentId });
   const post = await Post.findByIdAndUpdate(
     req.params.id,
